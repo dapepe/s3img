@@ -1,0 +1,22 @@
+{
+	"s3": {
+		"keyid"    : "your-key-id",
+		"secret"   : "your-key-secret",
+		"bucket"   : "bucket name",
+		"region"   : "your region"
+	},
+	"extension"    : ".jpg",
+	"convertbin"   : "convert",
+	"resizecmd"    : "%convertbin% %input% -trim -geometry %dimensions% -gravity center -background %bgcolor% -extent %dimensions% %output%",
+	"sizes": {
+		"thumb"    : [64, 50, "%convertbin% %input% -thumbnail %dimensions%^ -gravity center -extent %dimensions% %output%"],
+		"preview"  : [165, 165],
+		"full"     : [370, 370],
+		"lightbox" : [1000, 1000]
+	},
+	"dir"          : "./",
+	"source"       : "./src",
+	"magick": [
+		"command1 %output%"
+	]
+}

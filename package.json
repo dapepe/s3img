@@ -1,0 +1,31 @@
+{
+  "name": "s3img",
+  "author": "Peter Haider <peter.haider@live.de>",
+  "description": "s3img is an Amazon S3 Image Processing and Uploading Tool",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dapepe/s3img"
+  },
+  "main": "./lib/s3img",
+  "keywords": [
+    "aws",
+    "s3",
+    "upload",
+    "imagemagick",
+    "thumbnails"
+  ],
+  "bin": {
+    "s3img": "./bin/s3img"
+  },
+  "dependencies": {
+    "nopt": "~2.1.2",
+    "aws-sdk": "~2.0",
+    "mime": "~1.2",
+    "underscore": "~1.6.0"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "license": "GPL"
+}
