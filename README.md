@@ -24,16 +24,20 @@ The configuration file includes various options.
 		"bucket"   : "bucket name",
 		"region"   : "your region"
 	},
-	"convertbin": "convert",
-	"resizecmd": "%convertbin% %input% -trim -geometry %dimensions% -gravity center -background %bgcolor% -extent %dimensions% %output%",
+	"cache"        : 315360000,
+	"acl"          : "public-read",
+	"extension"    : ".jpg",
+	"threads"      : 1,
+	"convertbin"   : "convert",
+	"resizecmd"    : "%convertbin% %input% -trim -geometry %dimensions% -gravity center -background %bgcolor% -extent %dimensions% %output%",
 	"sizes": {
 		"thumb"    : [64, 50, "%convertbin% %input% -thumbnail %dimensions%^ -gravity center -extent %dimensions% %output%"],
 		"preview"  : [165, 165],
 		"full"     : [370, 370],
 		"lightbox" : [1000, 1000]
 	},
-	"target": "./out",
-	"source": "./src",
+	"dir"          : "./",
+	"source"       : "./src",
 	"magick": [
 		"command1 %output%"
 	]
@@ -79,6 +83,8 @@ CLI Options:
 | source    | string      | The source directory for the original images                                      |
 | upload    | bool/string | Push images to S3                                                                 |
 | convert   | bool/string | Convert images                                                                    |
+| overwrite | bool        | Overwrite existing images (default: skip)                                         |
+| threads   | number      | Number of parallel AWS threads (default: 1)                                       |
 
 
 ### Convert images ###
@@ -121,6 +127,7 @@ Node.js with NPM (Tested with Node Version 0.10.22)
 * [aws-sdk](https://www.npmjs.org/package/aws-sdk): ~2.0
 * [mime](https://www.npmjs.org/package/mime): ~1.2
 * [underscore](https://www.npmjs.org/package/underscore): ~1.6.0
+* [dateformat](https://www.npmjs.org/package/dateformat): ~1.0
 
 
 License

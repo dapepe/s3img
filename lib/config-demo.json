@@ -8,6 +8,7 @@
 	"cache"        : 315360000,
 	"acl"          : "public-read",
 	"extension"    : ".jpg",
+	"threads"      : 1,
 	"convertbin"   : "convert",
 	"resizecmd"    : "%convertbin% %input% -trim -geometry %dimensions% -gravity center -background %bgcolor% -extent %dimensions% %output%",
 	"sizes": {
