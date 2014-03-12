@@ -5,6 +5,8 @@
 		"bucket"   : "bucket name",
 		"region"   : "your region"
 	},
+	"cache"        : 315360000,
+	"acl"          : "public-read",
 	"extension"    : ".jpg",
 	"convertbin"   : "convert",
 	"resizecmd"    : "%convertbin% %input% -trim -geometry %dimensions% -gravity center -background %bgcolor% -extent %dimensions% %output%",
