@@ -2,7 +2,7 @@
   "name": "s3img",
   "author": "Peter Haider <peter.haider@live.de>",
   "description": "s3img is an Amazon S3 Image Processing and Uploading Tool",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/dapepe/s3img"
