@@ -29,5 +29,5 @@
   "engines"     : {
     "node": "*"
   },
-  "license"     : "GPL"
+  "license"     : "GPL-3.0"
 }
